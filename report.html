@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Report</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body class="container mt-5">
+    <h2 class="mb-3">JUnit Test Report</h2>
+    <div class="row text-center border-0">
+        <div class="col m-2 alert alert-primary">Total Tests: 295</div>
+        <div class="col m-2 alert alert-danger">Failures: 0</div>
+        <div class="col m-2 alert alert-warning">Errors: 0</div>
+        <div class="col m-2 alert alert-info">Skipped: 57</div>
+        <div class="col m-2 alert alert-success">Execution Time: 133.093374s</div>
+    </div>
+
+    <!--  -->
+    
+    <h3 class="mt-4">Test Suites</h3>
+    <ul class="list-group mb-2">
+        
+            <li class="list-group-item">
+                <strong>Participants Endpoint E2E Suite</strong>: 
+                <span class="text-success"><strong>295 passed</strong></span>, 
+                <button class="btn btn-sm btn-secondary" onclick="toggleTests('suite-passed1')">View Cases</button>
+                <ul id="suite-passed1" class="mt-2 d-none">
+                    
+                        <li class="mt-1 text-success">
+                            [It] E2E Suite for beneficiaries sanction screening flow when Beneficiary status is NOT in `pending_approval` and updating dob should NOT re-run beneficiary sanction screening again [kyc, beneficiaries, sanction-screening] (passed) - 8.733869917s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] E2E Suite for beneficiaries sanction screening flow when Beneficiary status is NOT in `pending_approval` and updating last name should NOT re-run beneficiary sanction screening again [kyc, beneficiaries, sanction-screening] (passed) - 8.408454709s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] E2E Suite for beneficiaries sanction screening flow when Beneficiary status is in `pending_approval` and updating dob and last name should re-run beneficiary sanction screening [kyc, beneficiaries, sanction-screening] (passed) - 11.750928084s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] E2E Suite for beneficiaries sanction screening flow when Beneficiary status is in `pending_approval` and updating dob should re-run beneficiary sanction screening [kyc, beneficiaries, sanction-screening] (passed) - 12.798900959000001s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] E2E Suite for beneficiaries sanction screening flow when Beneficiary status is in `pending_approval` and updating last name should re-run beneficiary sanction screening [kyc, beneficiaries, sanction-screening] (passed) - 14.80213975s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] E2E Suite for partial customer-creation using partial request and the participant is on TIER 3 will be allowed to do BUY USD [partial_customer] (passed) - 18.413379959s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] E2E Suite for partial customer-creation using partial request when phone number and dob provided, and age 64 or younger, and vendor is unable to return PII and sanctions screening returns positive should reject the customer [partial_customer] (passed) - 27.676787875s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] E2E Suite for partial customer-creation using partial request when phone number and dob provided, and age 64 or younger, and vendor is unable to return the PII should reject the customer [partial_customer] (passed) - 22.461252708s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] E2E Suite for partial customer-creation using partial request when phone number and dob provided, and participant is 65 or older should reject the customer [partial_customer] (passed) - 35.896220958s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] E2E Suite for partial customer-creation using partial request when phone number and dob provided, and vendor is unable to return PII and dob does not match should reject the customer [partial_customer] (passed) - 20.66915225s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] E2E Suite for partial customer-creation using partial request will not allow to create a customer with partial=false [partial_customer] (passed) - 1.447331625s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] E2E Suite for partial customer-creation using partial request will return an error if the contact number is missing [partial_customer] (passed) - 1.7022932499999999s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] E2E Suite for partial customer-creation using partial request will return an error if the onboarded location is not in the expected format [partial_customer] (passed) - 1.461726458s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] E2E Suite for partial customer-creation using partial request will return an error if the platform is not enable to use progressive KYC [partial_customer] (passed) - 0.602145916s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] E2E Suite for remittance sender-creation when creating remittance sender with the right information should create sender with a non-NULL kyc tier [remittance-sender, remittances] (passed) - 2.8941795s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] E2E Suite for remittance sender-creation when creating remittance senders without the right information should fail with a bad request when address one is missing [remittance-sender, remittances] (passed) - 0.756926875s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] E2E Suite for remittance sender-creation when creating remittance senders without the right information should fail with a bad request when city is missing [remittance-sender, remittances] (passed) - 0.797424292s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] E2E Suite for remittance sender-creation when creating remittance senders without the right information should fail with a bad request when email is missing [remittance-sender, remittances] (passed) - 0.717968541s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] E2E Suite for remittance sender-creation when creating remittance senders without the right information should fail with a bad request when first name is missing [remittance-sender, remittances] (passed) - 2.854250666s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] E2E Suite for remittance sender-creation when creating remittance senders without the right information should fail with a bad request when ip_address is local [remittance-sender, remittances] (passed) - 3.550783208s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] E2E Suite for remittance sender-creation when creating remittance senders without the right information should fail with a bad request when ip_address is missing [remittance-sender, remittances] (passed) - 3.538842s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] E2E Suite for remittance sender-creation when creating remittance senders without the right information should fail with a bad request when ip_address is reserved [remittance-sender, remittances] (passed) - 3.507804541s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] E2E Suite for remittance sender-creation when creating remittance senders without the right information should fail with a bad request when jurisdiction is missing [remittance-sender, remittances] (passed) - 0.756167125s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] E2E Suite for remittance sender-creation when creating remittance senders without the right information should fail with a bad request when last name is missing [remittance-sender, remittances] (passed) - 2.824226291s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] E2E Suite for remittance sender-creation when creating remittance senders without the right information should fail with a bad request when phone number is missing [remittance-sender, remittances] (passed) - 1.7549991249999999s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] E2E Suite for remittance sender-creation when creating remittance senders without the right information should fail with a bad request when signed_agreement is missing [remittance-sender, remittances] (passed) - 3.202280375s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] E2E Suite for remittance sender-creation when creating remittance senders without the right information should fail with a bad request when zip is missing [remittance-sender, remittances] (passed) - 0.709019083s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] E2E Suite for remittances calculate tally when a single trade is added should correctly be accounted for in each tracking policy and time period when calling CalculateTally [remittances-tally] (passed) - 4.097776458s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] E2E Suite for remittances calculate tally when multiple trades are added should correctly be accounted for in each tracking policy and time period when calling CalculateTally [remittances-tally] (passed) - 4.18354275s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] E2E test Suite to approve a submitted non_profit entity when submitting POST `/participants/entity/documents` with the required and optional documents should receive a 201 status code for all documents (passed) - 2.776224333s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] E2E test Suite to approve a submitted non_profit entity when submitting POST `/participants/entity/documents` with the required and optional documents should update the participant status as approved (passed) - 0.42746525s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] E2E test Suite to approve a submitted non_profit entity when submitting POST `/participants/entity/new` with valid input data should receive a new participant code with submitted status (passed) - 21.431110208s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] E2E test Suite to upload document when submitting POST `/participants/documents` with EU documents should receive a 201 status code for all documents (passed) - 1.851523834s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] E2E test Suite to upload document when submitting POST `/participants/documents` with the required and optional documents should receive a 201 status code for all documents (passed) - 25.962061124999998s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] GET `/participant/` when a platform has a valid sender will match the expected limit query [limit] (passed) - 3.989400416s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] GET `/participant/` when testing positive scenarios and the platform has permissions to get participant info should be able to fetch participant's basic info by participant code (passed) - 1.6653503330000001s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] GET `/participant/` when testing positive scenarios and the platform has permissions to get participant info should be able to fetch participant's full info by participant code (passed) - 1.300855416s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] GET `/participant/` when testing positive scenarios and the platform has permissions to get participant info should be able to fetch participant's sanction screening info by participant code (passed) - 1.254901375s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] GET `/participant/pCode/kyc_status` should match the schema and return the data associated with the participant (passed) - 3.905201s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] GET `/participant/pCode/kyc_status` should return 400 if the participant code is not found (passed) - 3.518379667s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] GET `/participant/pCode/kyc_status` should return 404 if the participant code is invalid (passed) - 3.706129833s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] GET `/participant/pCode/kyc_status` should return a response even if the participant code is a platform (passed) - 3.459172625s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] GET `/participant/pCode/kyc_status` should show the proper values after update (passed) - 3.640433083s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] GET `/participant/pCode/limits` should match the schema and return the data associated with the participant (passed) - 3.5643225s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] GET `/participant/pCode/limits` should return 400 if the participant code is not found (passed) - 3.007182166s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] GET `/participant/pCode/limits` should return 404 if the participant code is invalid (passed) - 3.4482681250000002s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] GET `/participant/pCode/limits` should return a response even if the participant code is a platform (passed) - 2.958406625s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] GET `/participant/pCode/limits` should show the proper values after update (passed) - 4.915257625s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] GET `/participant/pCode/limits` with levels when a platform has a valid sender should return deposits limits with -1 for coinstar-1 [limit] (passed) - 4.614760458s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] GET `/participant/pCode/limits` with levels when a platform has a valid sender should return empty limits [limit] (passed) - 3.55541825s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] GET `/participant/pCode/limits` with levels when a platform has a valid sender should return empty limits for natural person [limit] (passed) - 3.945167709s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] GET `/participant/pCode/limits` with levels when a platform has a valid sender should return limits after trade [limit] (passed) - 5.988869458s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] GET `/participant/pCode/limits` with levels when a platform has a valid sender should return trade limits [limit] (passed) - 2.297718583s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] GET `/participants/` when testing positive scenarios and the platform has permissions to get platforms should be able to fetch a participant by email (passed) - 1.382910667s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] GET `/participants/` when testing positive scenarios and the platform has permissions to get platforms should match the schema and return its associated participants (passed) - 17.552495125s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] PATCH /participants/beneficiaries/pCode when Updating a beneficiary with the right information should be able to update a beneficiary request and meet response schema [remittances] (passed) - 4.078871958s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] PATCH /participants/beneficiaries/pCode when Updating a beneficiary with the right information should not allow to update a beneficiary if last_name is not provided [remittances] (passed) - 3.403366875s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] PATCH /participants/beneficiaries/pCode when Updating a beneficiary with the right information should not allow to update a beneficiary if platform_updated_at is not provided [remittances] (passed) - 4.408032334s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] PATCH `/participants/customers/participantCode` when attempting to update a customer and the platform is NOT configured to receive PUBLIC_NOTIFICATION_PAYLOAD_TYPE_PARTICIPANT_UPDATED webhook notifications will NOT get a webhook notification even if idv, source_of_funds, industry, liveness_check is updated (passed) - 12.843301042s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] PATCH `/participants/customers/participantCode` when attempting to update a customer and the platform is configured to receive PUBLIC_NOTIFICATION_PAYLOAD_TYPE_PARTICIPANT_UPDATED webhook notifications will NOT get a webhook notification if the field doesn't change (passed) - 6.65881225s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] PATCH `/participants/customers/participantCode` when attempting to update a customer and the platform is configured to receive PUBLIC_NOTIFICATION_PAYLOAD_TYPE_PARTICIPANT_UPDATED webhook notifications will get a webhook notification if idv is updated (passed) - 2.412082917s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] PATCH `/participants/customers/participantCode` when attempting to update a customer and the platform is configured to receive PUBLIC_NOTIFICATION_PAYLOAD_TYPE_PARTICIPANT_UPDATED webhook notifications will get a webhook notification if industry is updated (passed) - 2.803131542s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] PATCH `/participants/customers/participantCode` when attempting to update a customer and the platform is configured to receive PUBLIC_NOTIFICATION_PAYLOAD_TYPE_PARTICIPANT_UPDATED webhook notifications will get a webhook notification if liveness_check is updated (passed) - 2.78730675s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] PATCH `/participants/customers/participantCode` when attempting to update a customer and the platform is configured to receive PUBLIC_NOTIFICATION_PAYLOAD_TYPE_PARTICIPANT_UPDATED webhook notifications will get a webhook notification if source_of_funds is updated (passed) - 2.92263175s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] PATCH `/participants/customers/participantCode` when attempting to update a customer and the platform is configured to receive PublicNotificationPayloadType_PUBLIC_NOTIFICATION_PAYLOAD_TYPE_PARTICIPANT_STATUS_CHANGED webhook notifications will get a webhook notification when participant is submitted (passed) - 6.889807458s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] PATCH `/participants/customers/participantCode` when attempting to update a customer participant from EU and the request is not valid should return errors when DOB cannot be updated (passed) - 1.067316834s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] PATCH `/participants/customers/participantCode` when attempting to update a customer participant from EU and the request is not valid should return errors when Email is missing (passed) - 1.070491042s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] PATCH `/participants/customers/participantCode` when attempting to update a customer participant from EU and the request is not valid should return errors when Invalid passport number for NL resident (passed) - 1.110165834s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] PATCH `/participants/customers/participantCode` when attempting to update a customer participant from EU and the request is not valid should return errors when PO BOX is not allowed as a city name (passed) - 1.04058325s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] PATCH `/participants/customers/participantCode` when attempting to update a customer participant from EU and the request is not valid should return errors when PO BOX is not allowed as an address (passed) - 1.039756s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] PATCH `/participants/customers/participantCode` when attempting to update a customer participant from EU and the request is not valid should return errors when PO BOX is not allowed as an address two (passed) - 1.023446791s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] PATCH `/participants/customers/participantCode` when attempting to update a customer participant from EU and the request is not valid should return errors when city value is not sent (passed) - 1.49354525s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] PATCH `/participants/customers/participantCode` when attempting to update a customer participant from EU and the request is not valid should return errors when country value is not sent (passed) - 1.283546542s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] PATCH `/participants/customers/participantCode` when attempting to update a customer participant from EU and the request is not valid should return errors when kyc must be sent (passed) - 1.398472167s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] PATCH `/participants/customers/participantCode` when attempting to update a customer participant from EU and the request is not valid should return errors when the signed agreements should be in an allowed region (passed) - 1.38710825s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] PATCH `/participants/customers/participantCode` when attempting to update a customer participant from EU and the request is valid will update the participant (passed) - 1.07516175s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] PATCH `/participants/customers/participantCode` when attempting to update a customer the idv status can't be set to unknown from the api will not change the idv status to unknown (passed) - 6.575288417s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] PATCH `/participants/customers/participantCode` when attempting to update a customer the idv status can't be set to unknown from the api will update the status of idv when request is from ADP (passed) - 11.737233125s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] PATCH `/participants/customers/participantCode` when attempting to update a customer when US platform and US participant locks participant when country is changed to a not-allowed one (passed) - 5.21717825s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] PATCH `/participants/customers/participantCode` when updating the account_link agreement will allow to update the account_link agreement for crypto-account-link true (passed) - 3.70414275s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] PATCH `/participants/customers/participantCode` when updating the account_link agreement will not allow to update the account_link agreement for crypto-account-link false (passed) - 3.24888225s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] PATCH `/participants/customers/participantCode` when verifying the fundSDK update rules will allow to update the fund-auto-convert agreement for a non FWCSDK platform (passed) - 1.515421084s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] PATCH `/participants/customers/participantCode` when verifying the fundSDK update rules will allow to update the other agreements for the participant (passed) - 5.537816917s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] PATCH `/participants/customers/participantCode` when verifying the fundSDK update rules will allow to update the other agreements for the participant (passed) - 3.92008525s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] PATCH `/participants/customers/participantCode` when verifying the fundSDK update rules will not allow to update the fund-auto-convert agreement for the partial participant (passed) - 1.338407833s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] PATCH `/participants/customers/participantCode` when verifying the fundSDK update rules will not allow to update the fund-auto-convert agreement for the participant (passed) - 1.344673583s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST /participants/beneficiaries/new when the platform is configured for Track Payouts Submitting a beneficiary twice (passing email) should fail the second time [payouts] (passed) - 1.07545s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST /participants/beneficiaries/new when the platform is configured for Track Payouts Submitting a beneficiary twice (passing phone) should fail the second time [payouts] (passed) - 1.035185042s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST /participants/beneficiaries/new when the platform is configured for Track Payouts Submitting a beneficiary with the right information should be able to submit a beneficiary request and meet response schema [payouts] (passed) - 5.317786458s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST /participants/beneficiaries/new when the platform is configured for Track Payouts Submitting a beneficiary without phone but with email should be able to submit a beneficiary [payouts, happy-path] (passed) - 2.3939842909999998s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST /participants/beneficiaries/new when the platform is configured for Track Payouts Submitting a beneficiary without the right information should fail with a bad request when address_one is missing [payouts] (passed) - 0.696195625s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST /participants/beneficiaries/new when the platform is configured for Track Payouts Submitting a beneficiary without the right information should fail with a bad request when city is missing [payouts] (passed) - 0.711842042s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST /participants/beneficiaries/new when the platform is configured for Track Payouts Submitting a beneficiary without the right information should fail with a bad request when date_of_birth is missing [payouts] (passed) - 0.699286833s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST /participants/beneficiaries/new when the platform is configured for Track Payouts Submitting a beneficiary without the right information should fail with a bad request when first name is missing [payouts] (passed) - 0.688897458s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST /participants/beneficiaries/new when the platform is configured for Track Payouts Submitting a beneficiary without the right information should fail with a bad request when id_number is missing [payouts] (passed) - 0.731384042s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST /participants/beneficiaries/new when the platform is configured for Track Payouts Submitting a beneficiary without the right information should fail with a bad request when id_number_type is missing [payouts] (passed) - 0.695980167s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST /participants/beneficiaries/new when the platform is configured for Track Payouts Submitting a beneficiary without the right information should fail with a bad request when last name is missing [payouts] (passed) - 0.768075458s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST /participants/beneficiaries/new when the platform is configured for Track Payouts Submitting a beneficiary without the right information should fail with a bad request when region is missing [payouts] (passed) - 0.653322583s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST /participants/beneficiaries/new when the platform is configured for Track Payouts Submitting a beneficiary without the right information should fail with a bad request when signed_agreements is missing [payouts] (passed) - 0.66065975s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST /participants/beneficiaries/new when the platform is configured for Track Payouts Submitting a beneficiary without the right information should fail with a bad request when signed_timestamp is missing [payouts] (passed) - 0.753069833s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST /participants/beneficiaries/new when the platform is configured for Track Payouts Submitting a beneficiary without the right information should fail with a bad request when type is missing [payouts] (passed) - 0.70857375s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST /participants/beneficiaries/new when the platform is configured for Track Payouts Submitting a beneficiary without the right information should fail with a bad request when zip is missing [payouts] (passed) - 0.696488042s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST /participants/beneficiaries/new when the platform is configured for Track Payouts Submitting a snn is sanctioned and we try to submit a beneficiary should be rejected after submission [payouts] (passed) - 8.26006825s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST /participants/beneficiaries/new when the platform is configured for Track Remittances allows to create a beneficiary with minimum information [remittances] (passed) - 12.481560084s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/authenticate for fixed platform` when trying to validate the participant by participant code with an existent participant but providing different date of birth should lock the participant and unlock should allow the same number of attempts (passed) - 7.020883792s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/authenticate for fixed platform` when trying to validate the participant by participant code with an existent participant but providing different date of birth should not lock the participant and valid dob should allow the same number of attempts (passed) - 5.620752958s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/authenticate for fixed platform` when trying to validate the participant by participant code with an existent participant but providing different date of birth should return 403 Forbidden and participant.validation.mismatch error code in response header (passed) - 7.728351125s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/authenticate` when trying to validate the participant by email with a nonexistent participant should return 404 Not Found and participant.not-found error code in response header (passed) - 1.02371225s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/authenticate` when trying to validate the participant by email with an existent and valid participant should return 200 Success and the participant code on the body response (passed) - 3.614012s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/authenticate` when trying to validate the participant by email with an existent participant but providing different date of birth should return 403 Forbidden and participant.validation.mismatch error code in response header (passed) - 3.410383s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/authenticate` when trying to validate the participant by email with an existent participant but the distance between home address and device physical location is higher than the PPR Rule limit should return 403 Forbidden and participant.geofence.violation error code in response header (passed) - 4.391189709s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/authenticate` when trying to validate the participant by email with an existent participant but the participant age is higher than the PPR Rule limit should return 403 Forbidden and participant.age-gate.violation error code in response header (passed) - 3.848042833s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/authenticate` when trying to validate the participant by email with an existent participant but the participant is not in approved state should return 403 Forbidden and participant.status.require-kyc error code in response header (passed) - 2.453696417s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/authenticate` when trying to validate the participant by email with an existent participant but with insufficient data to handle geo-fencing validation should return 403 Forbidden and participant.geofence.unavailable error code in response header (passed) - 4.720218166s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/authenticate` when trying to validate the participant by participant code should not lock participant despite many invalid attempts (passed) - 6.141263459s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/authenticate` when trying to validate the participant by participant code with a nonexistent participant should return 404 Not Found and participant.not-found error code in response header (passed) - 0.925641s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/authenticate` when trying to validate the participant by participant code with an existent and valid participant should return 200 Success and the participant code on the body response (passed) - 3.258986542s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/authenticate` when trying to validate the participant by participant code with an existent participant and transaction should fail if the participant tries to authenticate from a location outside the impossible travel distance with the previous device location (passed) - 4.456915416s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/authenticate` when trying to validate the participant by participant code with an existent participant but providing different date of birth should return 403 Forbidden and participant.validation.mismatch error code in response header (passed) - 3.678754917s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/authenticate` when trying to validate the participant by participant code with an existent participant but providing different email should return 403 Forbidden and participant.validation.mismatch error code in response header (passed) - 3.208082042s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/authenticate` when trying to validate the participant by participant code with an existent participant but providing different phone number should return 403 Forbidden and participant.validation.mismatch error code in response header (passed) - 3.250810375s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/authenticate` when trying to validate the participant by participant code with an existent participant but the distance between home address and device physical location is higher than the PPR Rule limit should return 403 Forbidden and participant.geofence.violation error code in response header (passed) - 3.716103584s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/authenticate` when trying to validate the participant by participant code with an existent participant but the participant age is higher than the PPR Rule limit should return 403 Forbidden and participant.age-gate.violation error code in response header (passed) - 3.753208375s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/authenticate` when trying to validate the participant by participant code with an existent participant but the participant is not in approved state should return 403 Forbidden and participant.status.require-kyc error code in response header (passed) - 2.445773292s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/authenticate` when trying to validate the participant by participant code with an existent participant but with insufficient data to handle geo-fencing validation should return 403 Forbidden and participant.geofence.unavailable error code in response header (passed) - 5.556533292s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/authenticate` when trying to validate the participant by phone number with a nonexistent participant should return 404 Not Found and participant.not-found error code in response header (passed) - 0.943442333s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/authenticate` when trying to validate the participant by phone number with an existent and valid participant should return 200 Success and the participant code on the body response (passed) - 3.803745625s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/authenticate` when trying to validate the participant by phone number with an existent participant but providing different date of birth should return 403 Forbidden and participant.validation.mismatch error code in response header (passed) - 3.7287220420000002s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/authenticate` when trying to validate the participant by phone number with an existent participant but providing different email should return 403 Forbidden and participant.validation.mismatch error code in response header (passed) - 3.5379885s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/authenticate` when trying to validate the participant by phone number with an existent participant but the distance between home address and device physical location is higher than the PPR Rule limit should return 403 Forbidden and participant.geofence.violation error code in response header (passed) - 4.087168125s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/authenticate` when trying to validate the participant by phone number with an existent participant but the participant age is higher than the PPR Rule limit should return 403 Forbidden and participant.age-gate.violation error code in response header (passed) - 3.678389708s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/authenticate` when trying to validate the participant by phone number with an existent participant but the participant is not in approved state should return 403 Forbidden and participant.status.require-kyc error code in response header (passed) - 5.135540334s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/authenticate` when trying to validate the participant by phone number with an existent participant but with insufficient data to handle geo-fencing validation should return 403 Forbidden and participant.geofence.unavailable error code in response header (passed) - 3.550324625s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when attempting to create a new EU customer and validate relationships  does not create a relationship between ZEROHASH and the natural person when the platform does not have a liquidity Model (passed) - 0.8475055s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when attempting to create a new EU customer and validate relationships creates a proper relationship between ZEROHASH and the natural person when the platform is configured for the NOVATED MODEL (passed) - 0.906310917s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when attempting to create a new EU customer and validate relationships creates a proper relationship between the platform and the natural person (passed) - 0.722113792s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when attempting to create a new EU customer and verify approval status auto approve the recently created participant (passed) - 2.5166429580000003s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when attempting to create a new EU customer given that the request is not valid should return errors when DOB is missing (passed) - 0.544612458s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when attempting to create a new EU customer given that the request is not valid should return errors when Email is missing (passed) - 0.538169875s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when attempting to create a new EU customer given that the request is not valid should return errors when PO BOX is not allowed as a city name (passed) - 0.54594675s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when attempting to create a new EU customer given that the request is not valid should return errors when PO BOX is not allowed as an address (passed) - 0.548989958s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when attempting to create a new EU customer given that the request is not valid should return errors when PO BOX is not allowed as an address two (passed) - 0.606663625s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when attempting to create a new EU customer given that the request is not valid should return errors when city value is not sent (passed) - 0.588436625s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when attempting to create a new EU customer given that the request is not valid should return errors when country value is not sent (passed) - 0.544542s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when attempting to create a new EU customer given that the request is not valid should return errors when first name is missing (passed) - 0.569349375s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when attempting to create a new EU customer given that the request is not valid should return errors when kyc must be sent (passed) - 0.578099834s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when attempting to create a new EU customer given that the request is not valid should return errors when last name is missing (passed) - 0.557845292s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when attempting to create a new EU customer given that the request is not valid should return errors when non_us_other_type must be specified for non_us_other (passed) - 0.571003083s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when attempting to create a new EU customer given that the request is not valid should return errors when state is mandatory when country is United States (passed) - 0.557503416s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when attempting to create a new EU customer given that the request is not valid should return errors when state should be valid when country is United States (passed) - 0.606670833s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when attempting to create a new EU customer given that the request is not valid should return errors when the signed agreements should be in an allowed region (passed) - 0.536520833s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when attempting to create a new EU customer given that the request is not valid should return errors when the signed timestamp should be valid (passed) - 0.545262958s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when attempting to create a new EU customer given that the request is not valid should return errors when the state should be correct for the country (passed) - 0.565125875s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when attempting to create a new EU customer given that the request is not valid should return errors when valid NL passport number must be used for id_number_type_passport (passed) - 0.53690675s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when attempting to create a new EU customer given that the request is not valid should return errors when valid issuing authority must be used for id_number_type_passport (passed) - 0.550949625s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when attempting to create a new EU customer given that the request is not valid will return an 400 error if the same requestID is used on different requests (passed) - 1.449536875s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when attempting to create a new EU customer the request is valid returns a 201 code when the citizenship is United States (passed) - 0.661539833s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when attempting to create a new EU customer the request is valid returns a 201 code when the country, tax_ix and citizenship are Costa Rica (passed) - 0.661282666s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when attempting to create a new EU customer the request is valid returns a 201 code when the id_number and id_number_type can be provided if citizenship and tax_id are provided (passed) - 0.666058333s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when attempting to create a new EU customer the request is valid returns a 201 code when the kyc and phone number can be specified (passed) - 0.762865916s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when attempting to create a new EU customer the request is valid returns a 201 code when the residence country is different than citizenship (passed) - 0.622024083s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when attempting to create a new EU customer the request is valid returns a 201 code when the risk rating can be sent blank (passed) - 0.640981125s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when attempting to create a new EU customer the request is valid returns a 201 code when the sate and zipcode can be null if the country is not United States (passed) - 0.621638917s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when attempting to create a new EU customer using different email combinations will NOT allow the same email for the same platform (passed) - 1.139830625s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when attempting to create a new EU customer using different email combinations will NOT allow the same information for the same platform (passed) - 1.059322417s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when attempting to create a new EU customer using different email combinations will allow the same email as its owner platform (passed) - 15.513946083s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when attempting to create a new EU customer using different email combinations will allow the same email for the different platforms (passed) - 19.292147541s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when attempting to create a new EU customer using different signed agreements will NOT allow using an invalid region (passed) - 4.547042167s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when attempting to create a new EU customer using different signed agreements will allow using a valid signed agreement with region eu for EU (passed) - 4.629671917s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when attempting to create a new US customer and validate relationships  does not create a relationship between ZEROHASH and the natural person when the platform does not have a liquidity Model (passed) - 1.089886125s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when attempting to create a new US customer and validate relationships creates a proper relationship between ZEROHASH and the natural person when the platform is configured for the NOVATED MODEL (passed) - 1.286166125s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when attempting to create a new US customer and validate relationships creates a proper relationship between the platform and the natural person (passed) - 0.765868166s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when attempting to create a new US customer and verify approval status auto approve the recently created participant (passed) - 1.062601791s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when attempting to create a new US customer given that the request is not valid should return errors when DOB is missing (passed) - 0.634012333s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when attempting to create a new US customer given that the request is not valid should return errors when Email is missing (passed) - 0.603398875s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when attempting to create a new US customer given that the request is not valid should return errors when PO BOX is not allowed as a city name (passed) - 0.554264375s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when attempting to create a new US customer given that the request is not valid should return errors when PO BOX is not allowed as an address (passed) - 0.558992833s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when attempting to create a new US customer given that the request is not valid should return errors when PO BOX is not allowed as an address two (passed) - 0.551782334s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when attempting to create a new US customer given that the request is not valid should return errors when city value is not sent (passed) - 0.615036291s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when attempting to create a new US customer given that the request is not valid should return errors when country value is not sent (passed) - 0.587309917s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when attempting to create a new US customer given that the request is not valid should return errors when first name is missing (passed) - 0.61607825s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when attempting to create a new US customer given that the request is not valid should return errors when kyc must be sent (passed) - 0.5688725s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when attempting to create a new US customer given that the request is not valid should return errors when last name is missing (passed) - 0.58018275s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when attempting to create a new US customer given that the request is not valid should return errors when non_us_other_type must be specified for non_us_other (passed) - 0.548667708s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when attempting to create a new US customer given that the request is not valid should return errors when state is mandatory when country is United States (passed) - 0.550383625s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when attempting to create a new US customer given that the request is not valid should return errors when state should be valid when country is United States (passed) - 0.541574541s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when attempting to create a new US customer given that the request is not valid should return errors when the signed agreements should be in an allowed region (passed) - 0.523478291s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when attempting to create a new US customer given that the request is not valid should return errors when the signed timestamp should be valid (passed) - 0.53460225s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when attempting to create a new US customer given that the request is not valid should return errors when the state should be correct for the country (passed) - 0.518202583s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when attempting to create a new US customer given that the request is not valid will return an 400 error if the same requestID is used on different requests (passed) - 1.02568925s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when attempting to create a new US customer the request is valid returns a 201 code when the citizenship is United States (passed) - 0.618483959s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when attempting to create a new US customer the request is valid returns a 201 code when the country, tax_ix and citizenship are Costa Rica (passed) - 0.610599792s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when attempting to create a new US customer the request is valid returns a 201 code when the id_number and id_number_type can be provided if citizenship and tax_id are provided (passed) - 0.600210041s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when attempting to create a new US customer the request is valid returns a 201 code when the kyc and phone number can be specified (passed) - 0.615752416s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when attempting to create a new US customer the request is valid returns a 201 code when the residence country is different than citizenship (passed) - 0.6154615s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when attempting to create a new US customer the request is valid returns a 201 code when the risk rating can be sent blank (passed) - 0.625968875s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when attempting to create a new US customer the request is valid returns a 201 code when the sate and zipcode can be null if the country is not United States (passed) - 0.628274791s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when attempting to create a new US customer using different email combinations will NOT allow the same email for the same platform (passed) - 1.070092459s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when attempting to create a new US customer using different email combinations will NOT allow the same information for the same platform (passed) - 1.0781749999999999s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when attempting to create a new US customer using different email combinations will allow the same email as its owner platform (passed) - 14.879549583s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when attempting to create a new US customer using different email combinations will allow the same email for the different platforms (passed) - 37.152169958s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when attempting to create a new US customer using different signed agreements will NOT accept an international agreement for a customer in United States (passed) - 4.551072625s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when attempting to create a new US customer using different signed agreements will NOT accept an international agreement without an WorldWide agreement (passed) - 4.607728542s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when attempting to create a new US customer using different signed agreements will NOT accept an international agreement without an WorldWide agreement (passed) - 4.550789333s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when attempting to create a new US customer using different signed agreements will NOT allow using an invalid region (passed) - 5.001992292s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when attempting to create a new US customer using different signed agreements will allow using a valid signed agreement us (passed) - 5.000358s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when testing device-id-required setting and the platform is configured as DeviceIdRequired false should allow to create a customer even when the X-ZH-APPLICATION-ID are not sent (passed) - 1.58035825s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when testing device-id-required setting and the platform is configured as DeviceIdRequired false should allow to create a customer even when the X-ZH-APPLICATION-ID does not match the platform (passed) - 1.560021625s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when testing device-id-required setting and the platform is configured as DeviceIdRequired true should not allow to create a customer when the X-ZH-APPLICATION-ID does not match the platform (passed) - 1.687987833s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when testing device-id-required setting and the platform is configured as DeviceIdRequired true should not allow to create a customer when the X-ZH-APPLICATION-ID is missing (passed) - 1.681308083s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when testing device-id-required setting and the platform is configured as DeviceIdRequired true should not allow to create a customer when the X-ZH-DEVICE-ID does not match (passed) - 1.8800585s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when testing device-id-required setting and the platform is configured as DeviceIdRequired true should not allow to create a customer when the X-ZH-DEVICE-ID is missing (passed) - 1.867197167s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when testing device-id-required setting and the platform is configured as DeviceIdRequired true will create the customer if the X-ZH-APPLICATION-ID and  X-ZH-DEVICE-ID match (passed) - 2.322207958s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when using skip_email_check_on_participant_creation setting allow to create customer with email and without phone number if skip_email_check_on_participant_creation platform setting is disabled (passed) - 0.473719291s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when using skip_email_check_on_participant_creation setting allow to create customer with email and without phone number if skip_email_check_on_participant_creation platform setting is enabled (passed) - 0.486655375s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when using skip_email_check_on_participant_creation setting allow to create customer with empty email if skip_email_check_on_participant_creation platform setting is enabled (passed) - 0.578348708s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/customers/new` when using skip_email_check_on_participant_creation setting do not allow to create customer with empty email if skip_email_check_on_participant_creation platform setting is disabled (passed) - 15.922642333s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/entity/new` when Submitting a request 2 times should fail the second time [participants\entity\new, payouts] (passed) - 1.144569792s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/entity/new` when entity creation is enabled for platform and NO control_persons are sent should be able to submit a payor request [participants\entity\new, payouts] (passed) - 0.545296959s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/entity/new` when entity creation is enabled for platform and correct information is sent should be able to submit a payor request [participants\entity\new, payouts] (passed) - 16.049157209s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/entity/new` when entity creation is not enabled for platform should not be able to submit a payor request [participants\entity\new, payouts] (passed) - 2.384906167s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/entity/new` when submitting POST `/participants/entity/new` with valid input data should be able to create a platform using GRPC [participants\entity\new] (passed) - 15.74132275s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/participants/entity/new` when submitting POST `/participants/entity/new` with valid input data will default the max and min values for the RFQ global limits [participants\entity\new] (passed) - 0.69753625s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/v1/onboarding/customer/new` when testing device-id-required setting and the platform is configured as DeviceIdRequired false should allow to create a customer even when the application-id are not sent (passed) - 1.926615125s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/v1/onboarding/customer/new` when testing device-id-required setting and the platform is configured as DeviceIdRequired false should allow to create a customer even when the application-id does not match the platform (passed) - 2.022084125s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/v1/onboarding/customer/new` when testing device-id-required setting and the platform is configured as DeviceIdRequired true should not allow to create a customer when the application-id does not match (passed) - 2.29595925s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/v1/onboarding/customer/new` when testing device-id-required setting and the platform is configured as DeviceIdRequired true should not allow to create a customer when the application-id does not match the platform (passed) - 2.847252666s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/v1/onboarding/customer/new` when testing device-id-required setting and the platform is configured as DeviceIdRequired true should not allow to create a customer when the application-id is missing (passed) - 2.124042292s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/v1/onboarding/customer/new` when testing device-id-required setting and the platform is configured as DeviceIdRequired true should not allow to create a customer when the device-id is missing (passed) - 2.484487583s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [It] POST `/v1/onboarding/customer/new` when testing device-id-required setting and the platform is configured as DeviceIdRequired true will create the customer if the application-id and application-id match (passed) - 2.573442334s
+                        </li>
+                    
+                        <li class="mt-1 text-success">
+                            [ReportAfterSuite] custom reporter (passed) - 7.562943125s
+                        </li>
+                    
+                </ul>
+            </li>
+        
+    </ul>
+    <ul class="list-group mb-2">
+        
+            <li class="list-group-item">
+                <strong>Participants Endpoint E2E Suite</strong>: 
+                <span class="text-danger"><strong>0 failed</strong></span>, 
+                <button class="btn btn-sm btn-secondary" onclick="toggleTests('suite-failure1')">View Cases</button>
+                <ul id="suite-failure1" class="mt-2 d-none">
+                    
+                </ul>
+            </li>
+        
+    </ul>
+    <ul class="list-group mb-2">
+        
+            <li class="list-group-item">
+                <strong>Participants Endpoint E2E Suite</strong>: 
+                <span class="text-warning"><strong>0 errors</strong></span>, 
+                <button class="btn btn-sm btn-secondary" onclick="toggleTests('suite-errors1')">View Cases</button>
+                <ul id="suite-errors1" class="mt-2 d-none">
+                    
+                </ul>
+            </li>
+        
+    </ul>
+    <ul class="list-group">
+        
+            <li class="list-group-item">
+                <strong>Participants Endpoint E2E Suite</strong>: 
+                <span class="text-info"><strong>0 skipped</strong></span>, 
+                <button class="btn btn-sm btn-secondary" onclick="toggleTests('suite-skipped1')">View Cases</button>
+                <ul id="suite-skipped1" class="mt-2 d-none">
+                    
+                        <li class="mt-1 text-info">
+                            [It] E2E Suite for partial customer-creation using partial request allows to create a customer with NO signed timestamp [partial_customer, unstable] (skipped) - 0.0s
+                        </li>
+                    
+                        <li class="mt-1 text-info">
+                            [It] E2E Suite for partial customer-creation using partial request allows to create a customer with Signed timestamp and display [partial_customer, unstable] (skipped) - 0.0s
+                        </li>
+                    
+                        <li class="mt-1 text-info">
+                            [It] E2E Suite for partial customer-creation using partial request allows to create a customer without on boarded location [partial_customer, CGL-590, unstable] (skipped) - 0.0s
+                        </li>
+                    
+                        <li class="mt-1 text-info">
+                            [It] E2E Suite for partial customer-creation using partial request and the participant is on TIER 1 will NOT be allowed to do BUY USD (sell USDC) [partial_customer] (skipped) - 0.0s
+                        </li>
+                    
+                        <li class="mt-1 text-info">
+                            [It] E2E Suite for partial customer-creation using partial request and the participant is on TIER 1 will NOT be allowed to do SELL BTC [partial_customer] (skipped) - 0.0s
+                        </li>
+                    
+                        <li class="mt-1 text-info">
+                            [It] E2E Suite for partial customer-creation using partial request and the participant is on TIER 1 will NOT be allowed to do SELL BTC [partial_customer] (skipped) - 0.0s
+                        </li>
+                    
+                        <li class="mt-1 text-info">
+                            [It] E2E Suite for partial customer-creation using partial request and the participant is on TIER 1 will be allowed to do SELL USD (buy USDC) [partial_customer] (skipped) - 0.0s
+                        </li>
+                    
+                        <li class="mt-1 text-info">
+                            [It] E2E Suite for partial customer-creation using partial request and the participant is on TIER 1 will be allowed to do TRANSFER USD [partial_customer] (skipped) - 0.0s
+                        </li>
+                    
+                        <li class="mt-1 text-info">
+                            [It] E2E Suite for partial customer-creation using partial request and the participant is on TIER 1 will be allowed to do WITHDRAW USD (payments endpoint) [partial_customer] (skipped) - 0.0s
+                        </li>
+                    
+                        <li class="mt-1 text-info">
+                            [It] E2E Suite for partial customer-creation using partial request and the participant is on TIER 1 will not be allowed to do WITHDRAW USD (payments endpoint) [partial_customer, unstable] (skipped) - 0.0s
+                        </li>
+                    
+                        <li class="mt-1 text-info">
+                            [It] E2E Suite for partial customer-creation using partial request and the participant is on TIER 3 will be allowed to do SELL BTC [partial_customer, unstable] (skipped) - 0.0s
+                        </li>
+                    
+                        <li class="mt-1 text-info">
+                            [It] E2E Suite for partial customer-creation using partial request and the participant is on TIER 3 will be allowed to do SELL USD [partial_customer, unstable] (skipped) - 0.0s
+                        </li>
+                    
+                        <li class="mt-1 text-info">
+                            [It] E2E Suite for partial customer-creation using partial request and the participant is on TIER 3 will be allowed to do TRANSFER USD [partial_customer] (skipped) - 0.0s
+                        </li>
+                    
+                        <li class="mt-1 text-info">
+                            [It] E2E Suite for partial customer-creation using partial request and the participant is on TIER NULL will not be allowed to do WITHDRAW USD (payments endpoint) [partial_customer, unstable] (skipped) - 0.0s
+                        </li>
+                    
+                        <li class="mt-1 text-info">
+                            [It] E2E Suite for partial customer-creation using partial request and the participant is on TIER NULL will not be allowed to do buy quotes [partial_customer, unstable] (skipped) - 0.0s
+                        </li>
+                    
+                        <li class="mt-1 text-info">
+                            [It] E2E Suite for partial customer-creation using partial request and the participant is on TIER NULL will not be allowed to do sell quotes [partial_customer, unstable] (skipped) - 0.0s
+                        </li>
+                    
+                        <li class="mt-1 text-info">
+                            [It] E2E Suite for partial customer-creation using partial request approve a participant if it accepts PLAID verification process [partial_customer] (skipped) - 0.0s
+                        </li>
+                    
+                        <li class="mt-1 text-info">
+                            [It] E2E Suite for partial customer-creation using partial request reject a participant if it fails PLAID verification process [partial_customer] (skipped) - 0.0s
+                        </li>
+                    
+                        <li class="mt-1 text-info">
+                            [It] E2E Suite for partial customer-creation using partial request updates the status, limit and tier of a participant with PLAID approval (SIGNED NOT provided) [partial_customer] (skipped) - 0.0s
+                        </li>
+                    
+                        <li class="mt-1 text-info">
+                            [It] E2E Suite for partial customer-creation using partial request updates the status, limit and tier of a participant with PLAID approval (SIGNED provided) [partial_customer, unstable] (skipped) - 0.0s
+                        </li>
+                    
+                        <li class="mt-1 text-info">
+                            [It] E2E Suite for partial customer-creation using partial request when phone number and dob provided, and age 64 or younger, and vendor is able to return PII, and the address is over 50 miles from the kiosk location should reject the customer [partial_customer] (skipped) - 0.0s
+                        </li>
+                    
+                        <li class="mt-1 text-info">
+                            [It] E2E Suite for partial customer-creation using partial request when phone number and dob provided, and age 64 or younger, and vendor is able to return PII, and the address is within 50 miles from the kiosk location, and the DoB matches, and the sanctions screening returns negative should approve the customer [partial_customer] (skipped) - 0.0s
+                        </li>
+                    
+                        <li class="mt-1 text-info">
+                            [It] E2E Suite for partial customer-creation using partial request will alow to use country and state instead of on boarding location [partial_customer, unstable] (skipped) - 0.0s
+                        </li>
+                    
+                        <li class="mt-1 text-info">
+                            [It] E2E Suite for partial customer-creation using partial request will not allow the same phone number for a new customer  [partial_customer, unstable] (skipped) - 0.0s
+                        </li>
+                    
+                        <li class="mt-1 text-info">
+                            [It] E2E Suite for remittances flow when executing the full e2e flow allows a platform to do a trade, transfer and withdrawal below the limits [transactions_tracker, limits] (skipped) - 0.0s
+                        </li>
+                    
+                        <li class="mt-1 text-info">
+                            [It] E2E Suite for remittances flow when executing the full e2e flow will allow a platform to buy USD (not blocked) [transactions_tracker, limits] (skipped) - 0.0s
+                        </li>
+                    
+                        <li class="mt-1 text-info">
+                            [It] E2E Suite for remittances flow when executing the full e2e flow will allow a platform to buy multiple assets below the limit [transactions_tracker, limits] (skipped) - 0.0s
+                        </li>
+                    
+                        <li class="mt-1 text-info">
+                            [It] E2E Suite for remittances flow when executing the full e2e flow will not allow a platform to do a EXECUTE if DAILY reached the Tier 1 limit [transactions_tracker, limits] (skipped) - 0.0s
+                        </li>
+                    
+                        <li class="mt-1 text-info">
+                            [It] E2E Suite for remittances flow when executing the full e2e flow will not allow a platform to do a EXECUTE if DAILY reached the Tier 2 limit [transactions_tracker, limits] (skipped) - 0.0s
+                        </li>
+                    
+                        <li class="mt-1 text-info">
+                            [It] E2E Suite for remittances flow when executing the full e2e flow will not allow a platform to do a RFQ if DAILY reached the Tier 1 limit [transactions_tracker, limits] (skipped) - 0.0s
+                        </li>
+                    
+                        <li class="mt-1 text-info">
+                            [It] E2E Suite for remittances flow when executing the full e2e flow will not allow a platform to do a RFQ if DAILY reached the Tier 2 limit [transactions_tracker, limits] (skipped) - 0.0s
+                        </li>
+                    
+                        <li class="mt-1 text-info">
+                            [It] E2E Suite for remittances flow when executing the full e2e flow will not allow a platform to do a RFQ if reached the Tier 1 LIFETIME limit [transactions_tracker, limits] (skipped) - 0.0s
+                        </li>
+                    
+                        <li class="mt-1 text-info">
+                            [It] E2E Suite for remittances flow when executing the full e2e flow will not allow a platform to do a RFQ if reached the Tier 1 MONTHLY limit [transactions_tracker, limits] (skipped) - 0.0s
+                        </li>
+                    
+                        <li class="mt-1 text-info">
+                            [It] E2E Suite for remittances flow when executing the full e2e flow will not allow a platform to do a RFQ if reached the Tier 2 MONTHLY limit [transactions_tracker, limits] (skipped) - 0.0s
+                        </li>
+                    
+                        <li class="mt-1 text-info">
+                            [It] E2E Suite for remittances flow when executing the full e2e flow will not allow a platform to do a withdrawal if beneficiary not approved [transactions_tracker, limits] (skipped) - 0.0s
+                        </li>
+                    
+                        <li class="mt-1 text-info">
+                            [It] E2E Suite for remittances flow when executing the full e2e flow will not allow a platform to do a withdrawal if sender not approved [transactions_tracker, limits, unstable] (skipped) - 0.0s
+                        </li>
+                    
+                        <li class="mt-1 text-info">
+                            [It] E2E test Suite to approve a submitted non_profit entity when submitting POST `/participants/entity/documents` with EU documents should receive a 201 status code for all documents (skipped) - 0.0s
+                        </li>
+                    
+                        <li class="mt-1 text-info">
+                            [It] E2E test Suite to approve a submitted non_profit entity when submitting POST `/participants/entity/documents` with EU documents should update the participant status as approved (skipped) - 0.0s
+                        </li>
+                    
+                        <li class="mt-1 text-info">
+                            [It] PATCH /participants/beneficiaries/pCode when Updating a beneficiary with INVALID information should NOT be able to submit a beneficiary update request [remittances, payouts, unstable] (skipped) - 0.0s
+                        </li>
+                    
+                        <li class="mt-1 text-info">
+                            [It] PATCH /participants/beneficiaries/pCode when Updating a beneficiary with the right information should be able to submit a beneficiary update request and meet response schema [remittances, payouts, unstable] (skipped) - 0.0s
+                        </li>
+                    
+                        <li class="mt-1 text-info">
+                            [It] PATCH `/participants/customers/participantCode` when attempting to update a customer and the platform is configured to receive PUBLIC_NOTIFICATION_PAYLOAD_TYPE_PARTICIPANT_UPDATED webhook notifications will NOT get a webhook notification if idv, source_of_funds, industry, liveness_check is not updated [unstable] (skipped) - 0.0s
+                        </li>
+                    
+                        <li class="mt-1 text-info">
+                            [It] POST /participants/beneficiaries/new when the platform is configured for Track Payouts Submitting a beneficiary without the right information should fail with a bad request when phone number is missing [payouts, unstable] (skipped) - 0.0s
+                        </li>
+                    
+                        <li class="mt-1 text-info">
+                            [It] POST `/participants/authenticate` when trying to validate the participant by email with an existent participant but the participant is not in approved state and reached the max attempts should return 403 Forbidden and participant.validation.not-approved error code in response header (skipped) - 0.0s
+                        </li>
+                    
+                        <li class="mt-1 text-info">
+                            [It] POST `/participants/authenticate` when trying to validate the participant by participant code with an existent participant but the participant is not in approved state and reached the max attempts should return 403 Forbidden and participant.validation.not-approved error code in response header (skipped) - 0.0s
+                        </li>
+                    
+                        <li class="mt-1 text-info">
+                            [It] POST `/participants/authenticate` when trying to validate the participant by phone number with an existent participant but the participant is not in approved state and reached the max attempts should return 403 Forbidden and participant.validation.not-approved error code in response header (skipped) - 0.0s
+                        </li>
+                    
+                        <li class="mt-1 text-info">
+                            [It] POST `/participants/customers/minor` when address_two is not sent should be able to create a minor [post, minor, create] (skipped) - 0.0s
+                        </li>
+                    
+                        <li class="mt-1 text-info">
+                            [It] POST `/participants/customers/minor` when all relevant information is submitted should be able to create a minor [post, minor] (skipped) - 0.0s
+                        </li>
+                    
+                        <li class="mt-1 text-info">
+                            [It] POST `/participants/customers/minor` when minor is older than 18 should NOT be able to create a minor [post, minor] (skipped) - 0.0s
+                        </li>
+                    
+                        <li class="mt-1 text-info">
+                            [It] POST `/participants/customers/minor` when not sending utma_signed_timestamp and custodian_participant_code should NOT be able to create a minor [post, minor] (skipped) - 0.0s
+                        </li>
+                    
+                        <li class="mt-1 text-info">
+                            [It] POST `/participants/customers/minor` when not sending utma_signed_timestamp and invalid utma_signed_timestamp should NOT be able to create a minor [post, minor] (skipped) - 0.0s
+                        </li>
+                    
+                        <li class="mt-1 text-info">
+                            [It] POST `/participants/customers/minor` when sending an inexistent custodian should NOT be able to create a minor [post, minor] (skipped) - 0.0s
+                        </li>
+                    
+                        <li class="mt-1 text-info">
+                            [It] POST `/participants/customers/minor` when sending invalid id_number_type should NOT be able to create a minor [post, minor] (skipped) - 0.0s
+                        </li>
+                    
+                        <li class="mt-1 text-info">
+                            [It] POST `/participants/customers/new` when using skip_email_check_on_participant_creation setting do not allow to create customer without email and with phone number and further request with email and the same phone number if skip_email_check_on_participant_creation platform setting is enabled [unstable] (skipped) - 0.0s
+                        </li>
+                    
+                        <li class="mt-1 text-info">
+                            [It] POST `/participants/customers/new` when using skip_email_check_on_participant_creation setting do not allow to create customer without email using duplicated phone number if skip_email_check_on_participant_creation platform setting is enabled [unstable] (skipped) - 0.0s
+                        </li>
+                    
+                        <li class="mt-1 text-info">
+                            [It] POST `/participants/customers/promote_minor` when all relevant information is submitted should be able to promote a minor (skipped) - 0.0s
+                        </li>
+                    
+                        <li class="mt-1 text-info">
+                            [It] POST `/participants/customers/promote_minor` when submitting request with tax_id and citizenship='Spain', but without id_number and id_number_type should not be able to promote a minor (skipped) - 0.0s
+                        </li>
+                    
+                        <li class="mt-1 text-info">
+                            [It] POST `/participants/customers/promote_minor` when submitting request with tax_id and citizenship='United States', but without id_number and id_number_type should be able to promote a minor (skipped) - 0.0s
+                        </li>
+                    
+                </ul>
+            </li>
+        
+    </ul>
+    
+    <script>
+        function toggleTests(id) {
+            var elem = document.getElementById(id);
+            if (elem.classList.contains('d-none')) {
+                elem.classList.remove('d-none');
+            } else {
+                elem.classList.add('d-none');
+            }
+        }
+    </script>
+</body>
+</html>

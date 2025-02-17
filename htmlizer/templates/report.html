@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Report</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body class="container mt-5">
+    <h2 class="mb-3">JUnit Test Report</h2>
+    <div class="row text-center border-0">
+        <div class="col m-2 alert alert-primary">Total Tests: {{ data.tests }}</div>
+        <div class="col m-2 alert alert-danger">Failures: {{ data.failures }}</div>
+        <div class="col m-2 alert alert-warning">Errors: {{ data.errors }}</div>
+        <div class="col m-2 alert alert-info">Skipped: {{ data.skipped }}</div>
+        <div class="col m-2 alert alert-success">Execution Time: {{ data.time }}s</div>
+    </div>
+
+    <!-- {% if data.export == false %}
+    <div class="mb-3">
+        <a href="/export/html" class="btn btn-primary">Export as HTML</a>
+    </div>
+    {% endif %} -->
+    
+    <h3 class="mt-4">Test Suites</h3>
+    <ul class="list-group mb-2">
+        {% for suite in data.suites %}
+            <li class="list-group-item">
+                <strong>{{ suite.name }}</strong>: 
+                <span class="text-success"><strong>{{ suite.passed }} passed</strong></span>, 
+                <button class="btn btn-sm btn-secondary" onclick="toggleTests('suite-passed{{ loop.index }}')">View Cases</button>
+                <ul id="suite-passed{{ loop.index }}" class="mt-2 d-none">
+                    {% for case in suite.passed_cases %}
+                        <li class="mt-1 text-success">
+                            {{ case.name }} ({{ case.status }}) - {{ case.time }}s
+                        </li>
+                    {% endfor %}
+                </ul>
+            </li>
+        {% endfor %}
+    </ul>
+    <ul class="list-group mb-2">
+        {% for suite in data.suites %}
+            <li class="list-group-item">
+                <strong>{{ suite.name }}</strong>: 
+                <span class="text-danger"><strong>{{ suite.failures }} failed</strong></span>, 
+                <button class="btn btn-sm btn-secondary" onclick="toggleTests('suite-failure{{ loop.index }}')">View Cases</button>
+                <ul id="suite-failure{{ loop.index }}" class="mt-2 d-none">
+                    {% for case in suite.failure_cases %}
+                        <li class="mt-1 text-danger">
+                            {{ case.name }} ({{ case.status }}) - {{ case.time }}s
+                        </li>
+                        <pre><code> {{case.error}}</code></pre>
+                    {% endfor %}
+                </ul>
+            </li>
+        {% endfor %}
+    </ul>
+    <ul class="list-group mb-2">
+        {% for suite in data.suites %}
+            <li class="list-group-item">
+                <strong>{{ suite.name }}</strong>: 
+                <span class="text-warning"><strong>{{ suite.errors }} errors</strong></span>, 
+                <button class="btn btn-sm btn-secondary" onclick="toggleTests('suite-errors{{ loop.index }}')">View Cases</button>
+                <ul id="suite-errors{{ loop.index }}" class="mt-2 d-none">
+                    {% for case in suite.error_cases %}
+                        <li class="mt-1 text-warning">
+                            {{ case.name }} ({{ case.status }}) - {{ case.time }}s
+                        </li>
+                    {% endfor %}
+                </ul>
+            </li>
+        {% endfor %}
+    </ul>
+    <ul class="list-group">
+        {% for suite in data.suites %}
+            <li class="list-group-item">
+                <strong>{{ suite.name }}</strong>: 
+                <span class="text-info"><strong>{{ suite.skipped }} skipped</strong></span>, 
+                <button class="btn btn-sm btn-secondary" onclick="toggleTests('suite-skipped{{ loop.index }}')">View Cases</button>
+                <ul id="suite-skipped{{ loop.index }}" class="mt-2 d-none">
+                    {% for case in suite.skipped_cases %}
+                        <li class="mt-1 text-info">
+                            {{ case.name }} ({{ case.status }}) - {{ case.time }}s
+                        </li>
+                    {% endfor %}
+                </ul>
+            </li>
+        {% endfor %}
+    </ul>
+    
+    <script>
+        function toggleTests(id) {
+            var elem = document.getElementById(id);
+            if (elem.classList.contains('d-none')) {
+                elem.classList.remove('d-none');
+            } else {
+                elem.classList.add('d-none');
+            }
+        }
+    </script>
+</body>
+</html>
